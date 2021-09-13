@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+  <head>
+    <title>Название страницы</title>
+  </head>
+
+  <body>
+
+  	<h2>Список</h2>
+
+    <ul>
+    	<li><a href="http://www.kubsu.ru">Официальный сайт КубГУ</li></a>
+		  <li><a href="http://example.com">Сайт Example в протоколе http</a></li>
+	    <li><a href="https://example.com">Сайт Example в протоколе https</a></li>
+	    <li><a href="ftp://example.com/text.txt">Сервер ftp без аторизации</a></li>
+		  <li><a href="ftp://user:password@example.com/text.txt">Сервер ftp с аторизации</a></li>
+		  <li><a href="http://example.com/page#element_id">Cсылка на фрагмент с сайта Example.com</a></li>
+		  <li><a href="#element_id">Ссылка на фрагмент на текущей странице</a></li>
+		  <li><a href="https://example.com?id=1234&t=1200">Ссыдка URL с двумя параметрами</a></li>
+		  <li>
+		  	<ol>
+		  		<li><a href="https://www.kubsu.ru/">Главная страница</a></li>
+		  		<li><a href="https://www.kubsu.ru/ru/abiturient/news">Новости</a></li>
+		  		<li><a href="https://www.kubsu.ru/user">Регистрация</a></li>
+		  	</ol>
+		  </li>
+		  <li><a>Ссылка без href</a></li>
+		  <li><a href="">Ссылка с пустым href</a></li>
+		  <li><a href="http://example.com" rel="nofollow">Ссылка по которой запрещен переход поисковикам</a></li>
+		  <li><a href="http://example.com"><noscript>Этот текст не индексируется</noscript>Без индексации</a></li>
+		  <li><a href="https://github.com/Victor90001/Victor90001.github.io"><img src="example.png"></img></a></li>
+		  <li>
+		  	<img src="example_map.jpg" usemap="#map">
+		  	<map name="map">
+		  		<area shape="circle" coords="110,110,110" href="https://web.telegram.org">
+		  		<area shape="circle" coords="110,330,110" href="https://www.facebook.com">
+		  		<area shape="rect" coords="240,25, 410,200" href="https://vk.com">
+		  		<area shape="rect" coords="240,240, 420,420" href="https://www.instagram.com">
+		  	</map>
+		  </li>
+		  <li><a href="text.txt">Отоносительная в текущем каталоге</a></li>
+		  <li><a href="about/img.jpg">Относительная в каталоге about</a></li>
+		  <li><a href="../about">Относительная в каталоге на уровень выше</a></li>
+		  <li><a href="../../about">Относительная в каталоге на 2 уровня выше</a></li>
+		  <li><a href="/">Сокращенная на главную</a></li>
+		  <li><a href="/c/s29kaKrTYI2">Сокращённая на внутреннюю </a></li>
+    </ul>
+
+	<h2>Форма</h2>
+	<form action="/" method="POST">
+
+      <label>
+        Введите своё имя:<br>
+        <input name="field-name-1">
+      </label><br>
+
+      <label>
+        Введите свой адрес электронной почты (Email):<br>
+        <input name="field-email" value="" type="email">
+      </label><br>
+
+      <label>
+        Дата рождения:<br>
+        <input name="field-date" type="date">
+      </label><br>
+
+      Ваш пол:<br>
+      <label><input type="radio" name="gender1" value="муж">Мужчина</label>
+      <label><input type="radio" name="gender2" value="жен">Женщина</label><br>
+
+      Количество конечностей:<br>
+      <label><input type="radio" name="limb0">0</label>
+      <label><input type="radio" name="limb1">1</label>
+      <label><input type="radio" name="limb1">2</label>
+      <label><input type="radio" name="limb1">3</label>
+      <label><input type="radio" name="limb1">4</label><br>
+
+      <label>
+        Список сверхспособностей:<br>
+        <select name="field-name-4[]"
+          multiple="multiple">
+          <option value="Значение1" selected="selected">Магия</option>
+          <option value="Значение2">Скорость света</option>
+          <option value="Значение3">Супер-прыжок</option>
+          <option value="Значение4">Телепортация</option>
+          <option value="Значение5">Управление временем</option>
+          <option value="Значение6">Перемещение во времени</option>
+        </select>
+      </label><br>
+
+      <label>
+        Биография (о себе):<br>
+        <textarea name="biography"></textarea>
+      </label><br>
+
+      С контрактом ознакомлены?<br>
+      <label><input type="checkbox" name="check1">С контрактом ознакомлен</label><br>
+
+      <input type="submit" value="Отправить">
+    </form>
+  </body>
+  
+</html>
+ 
