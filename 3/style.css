@@ -1,0 +1,86 @@
+header img{
+    float:left;
+    margin-right:20px;
+}
+header{
+    background-color:#CCC;
+    padding-top: 1px;
+    padding-bottom: 28px;
+    vertical-align: middle;
+}
+header div{
+    max-width:960px;
+    margin:0 auto;
+}
+header h1{
+    background-color: #dedede;
+}
+nav{
+    background-color: #bebebe;
+    max-width: 100%;
+    margin:5px auto;
+    padding: 10px;
+    border: ridge rgb(92, 255, 38);
+}
+#content{
+    max-width: 960px;
+    margin:0 auto;
+    background-color: #bbbb;
+}
+div.list{
+    max-width: 100%;
+    margin:0 auto;
+    background-color: #bbbb;
+}
+div.form{
+    max-width: 100%;
+    margin:0 auto;
+    background-color: #bbbb;
+}
+div.table{
+    max-width: 100%;
+    margin:0 auto;
+    background-color: #bbbb;
+}
+table tr:nth-child(2n) td{
+    background-color: rgba(0, 255, 0, 0.2);
+}
+table tr:nth-child(2n+1) td{
+    background-color: rgba(255, 255, 0, 0.4);
+}
+footer{
+    background-color:#CCC;
+    margin: 5px;
+    padding: 5px;
+}
+table ,th,td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+}
+
+@media screen and (orientation: portrait) and (min-width: 720px){
+    nav a{
+        display: block;
+    }
+    nav{
+        width: 100;
+    }
+    #main{
+        display: flex;
+        flex-direction: column;
+    }
+    .list{
+        width: 100%;
+        order: 1;
+    }
+    .form{
+        width: 100%;
+        order: 2;
+    }
+    .table{
+        width: 100%;
+        order: 3;
+    }
+}
