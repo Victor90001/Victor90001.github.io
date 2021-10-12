@@ -15,7 +15,7 @@ function summa() {
     let colvo = document.getElementsByName("amount");
     let sum= parseFloat(price[0].value) * parseFloat(colvo[0].value);
     let a1= parseFloat(price[0].value),a2=parseFloat(colvo[0].value);
-    if(!isNumeric(a1) && a1>0){
+    if(!isNumeric(a1) && a1<0){
     alert("Укажите цену правильно");
     return false;
     }
