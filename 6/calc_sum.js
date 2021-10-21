@@ -72,7 +72,9 @@ function updatePrice(){
   //only radio
   if(s.value=="2"){
     let radios = document.getElementsByName("Opt");
-    price=parseInt(amount[0].value)*prices.custChoise[1];
+    if(isInt(parseInt(amount[0].value))){
+      price=parseInt(amount[0].value)*prices.custChoise[1];
+    }
     radios.forEach(function(radio) {
       if (radio.checked) {
         let optionPrice = prices.Opt[radio.value];
