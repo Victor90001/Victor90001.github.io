@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script1.js"></script>
+    <script defer src="jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Задание 8</title>
+  </head>
+
+  <body>
+    <p>
+      <button class="button btn btn-primary" data-modal="modalForm">Заполнить форму</button>
+    </p>
+    <div id="modalForm" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+          <form class="Form" id="mainForm" action="https://formcarry.com/s/0tAvUSy9qZ1" method="POST" accept-charset="UTF-8">
+            <h2>Введите данные в форму</h2>
+            <div>
+              <label for="name">Имя</label><br>
+              <input class="fname" type="text" name="name" placeholder="ФИО">
+              <label for="email">Адрес электронной почты</label><br>
+              <input type="emal" name="name" placeholder="example@email.com">
+            </div>
+            <span>Сообщение</span>
+            <div>
+              <textarea></textarea>
+            </div>
+            <input type="checkbox" name="checkbox"> Я согласен с условиями обработки персональных данных
+            <button type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    $(function(){
+    $(".Form").submit(function(e){
+      e.preventDefault();
+      var href = $(this).attr("action");
+      $.ajax({
+          type: "POST",
+          dataType: "json",
+          url: href,
+          data: $(this).serialize()
+      }).done(function() {
+        alert('Отправлено.');
+      }).fail(function() {
+        alert('Что-то пошло не так.');
+        });
+      });
+    });
+  </script>
+</html>
